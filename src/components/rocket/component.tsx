@@ -2,12 +2,6 @@ import React, { ChangeEvent, FC, useEffect, useState } from "react";
 import { getRockets } from "../../services/spacex/service";
 import "../../styles.css";
 
-const options = [
-  'All',
-  'Active',
-  'Inactive',
-]
-
 export const Rocket: FC = ()=>{
   const [Rocket,setRocket] = useState<any>(undefined);
   const [filter,setFilter] = useState<any>("all");
@@ -26,18 +20,18 @@ export const Rocket: FC = ()=>{
     else if (event.target.value==="inactive")
       setFilter(false);
     else setFilter("all");
-    console.log(filter)
   };
 
   return(
     <>
       <div className="title">Rockets</div>
-      <p>Show: </p>
-      <select onChange={filterByActive}>
-        <option value="all">All</option>
-        <option value="active">Active</option>
-        <option value="inactive">Inactive</option>
-      </select>
+      <div className="filter"><b>Show:</b>
+        <select className="select" onChange={filterByActive}>
+          <option value="all">All</option>
+          <option value="active">Active</option>
+          <option value="inactive">Inactive</option>
+        </select>
+      </div>
       {Rocket!== undefined ? (
         <div className="card-group">
           {Rocket.map((rocketIndex:any)=>(
