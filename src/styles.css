@@ -16,3 +16,21 @@
   margin: 1rem;
   border-radius: 2rem;
 }
+
+.active, .inactive{
+  background-color: green;
+  height: 1rem;
+  width: 2rem;
+  margin-left: 1rem;
+  border-radius: 1rem;
+}
+
+.inactive{
+  background-color: red;
+}
+
+.status{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

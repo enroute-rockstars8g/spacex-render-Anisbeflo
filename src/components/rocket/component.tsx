@@ -21,10 +21,10 @@ export const Rocket: FC = ()=>{
         <div className="tag-group">
           {Rocket.map((rocketIndex:any)=>(
             <div className="tag">
-              <p>Name: {rocketIndex.name}</p>
-              <p>Active: {rocketIndex.active ? "yes" : "no"}</p>
-              <p>First Flight: {rocketIndex.first_flight}</p>
-              <p>Description: {rocketIndex.description}</p>
+              <p><b>Name:</b> {rocketIndex.name}</p>
+              <p className="status"><b>Active:</b> {rocketIndex.active ? <div className="active"/> : <div className="inactive"/>}</p>
+              <p><b>First Flight:</b> {rocketIndex.first_flight}</p>
+              <p><b>Description:</b> {rocketIndex.description}</p>
               <br/>
             </div>
           ))}
