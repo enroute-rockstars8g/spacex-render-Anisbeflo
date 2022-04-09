@@ -2,23 +2,23 @@ import React, { ChangeEvent, FC, useEffect, useState } from "react";
 import { getRockets } from "../../services/spacex/service";
 
 export const Rocket: FC = ()=>{
-  const [actualRocket,setActualRocket] = useState<any>(undefined);
+  const [Rocket,setRocket] = useState<any>(undefined);
 
   useEffect(()=>{
     const loadRockets = async ()=>{
       const Rockets = await getRockets();
-      setActualRocket(Rockets);
+      setRocket(Rockets);
     };
     loadRockets();
   },[]);
 
-  console.log(actualRocket);
+  console.log(Rocket);
   return(
     <div>
       <p>Rockets</p>
-      {actualRocket!== undefined ? (
+      {Rocket!== undefined ? (
         <div>
-          {actualRocket.map((rocketIndex:any)=>(
+          {Rocket.map((rocketIndex:any)=>(
             <div>
               <p>Name: {rocketIndex.name}</p>
               <p>Active: {rocketIndex.active ? "yes" : "no"}</p>
