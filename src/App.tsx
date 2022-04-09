@@ -1,12 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Ship } from './components/ships/component';
+import { Rocket } from './components/rocket/component';
 
 function App() {
   return (
     <div className="App">
-      <Ship/>
+      <Rocket/>
     </div>
   );
 }
