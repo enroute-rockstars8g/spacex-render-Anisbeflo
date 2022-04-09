@@ -5,3 +5,14 @@
   font-size: 3rem;
 }
 
+.tag-group{
+  background-color: #785964;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.tag{
+  background-color: #D5C7BC;
+  margin: 1rem;
+  border-radius: 2rem;
+}

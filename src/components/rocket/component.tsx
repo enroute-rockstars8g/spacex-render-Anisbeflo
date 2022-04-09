@@ -18,9 +18,9 @@ export const Rocket: FC = ()=>{
     <>
       <div className="title">Rockets</div>
       {Rocket!== undefined ? (
-        <div>
+        <div className="tag-group">
           {Rocket.map((rocketIndex:any)=>(
-            <div>
+            <div className="tag">
               <p>Name: {rocketIndex.name}</p>
               <p>Active: {rocketIndex.active ? "yes" : "no"}</p>
               <p>First Flight: {rocketIndex.first_flight}</p>
