@@ -1,5 +1,6 @@
 import React, { ChangeEvent, FC, useEffect, useState } from "react";
 import { getRockets } from "../../services/spacex/service";
+import "../../styles.css";
 
 export const Rocket: FC = ()=>{
   const [Rocket,setRocket] = useState<any>(undefined);
@@ -14,8 +15,8 @@ export const Rocket: FC = ()=>{
 
   console.log(Rocket);
   return(
-    <div>
-      <p>Rockets</p>
+    <>
+      <div className="title">Rockets</div>
       {Rocket!== undefined ? (
         <div>
           {Rocket.map((rocketIndex:any)=>(
@@ -29,7 +30,7 @@ export const Rocket: FC = ()=>{
           ))}
         </div>
       ) : null}
-    </div>
+    </>
   );
 };
 
